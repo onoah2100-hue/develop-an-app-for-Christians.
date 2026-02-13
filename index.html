@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faith Journal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Faith Journal</h1>
+      <p class="subtitle">Grow daily in prayer, gratitude, and Scripture.</p>
+
+      <section class="card" aria-labelledby="verse-heading">
+        <h2 id="verse-heading">Verse of the Day</h2>
+        <blockquote id="verse-text"></blockquote>
+      </section>
+
+      <section class="card" aria-labelledby="reflection-heading">
+        <h2 id="reflection-heading">Reflection Prompt</h2>
+        <p id="reflection-text"></p>
+      </section>
+
+      <section class="card" aria-labelledby="prayer-heading">
+        <h2 id="prayer-heading">Prayer Requests</h2>
+        <form id="prayer-form">
+          <label for="prayer-input" class="sr-only">Add prayer request</label>
+          <input id="prayer-input" type="text" maxlength="120" placeholder="Add a prayer request" required />
+          <button type="submit">Add</button>
+        </form>
+        <ul id="prayer-list"></ul>
+      </section>
+
+      <section class="card" aria-labelledby="gratitude-heading">
+        <h2 id="gratitude-heading">Today I’m Thankful For…</h2>
+        <label for="gratitude-input" class="sr-only">Gratitude note</label>
+        <textarea id="gratitude-input" rows="4" maxlength="300" placeholder="Write your gratitude note..."></textarea>
+        <button id="save-gratitude" type="button">Save Note</button>
+        <p id="save-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
